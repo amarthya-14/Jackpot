@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Figtree:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0e0e10;
+    font-family: 'Figtree', sans-serif;
+    color: #f1f1f1;
+    overflow-x: hidden;
+}
+
+h1, .headline {
+    font-family: 'Orbitron', sans-serif;
+    color: #f1f1f1;
+    margin: 0;
+}
+
+/* Header */
+.app-header {
+    padding: 60px 0 30px;
+    text-align: center;
+    border-bottom: 1px solid #2a2a2d;
+}
+
+.app-header .headline {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    background: linear-gradient(90deg, #00f5d4, #00f5d4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Timer */
+.time-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.time-heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #999;
+}
+
+.timer-box {
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #00f5d4;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #2a2a2d;
+    border-radius: 12px;
+    padding: 12px 24px;
+    display: inline-flex;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.timer-box:hover {
+    transform: scale(1.05);
+}
+
+/* Rotating Customer */
+.rotating-customer {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.current-name {
+    font-size: 2.2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #f1f1f1;
+    transition: opacity 0.5s ease;
+}
+
+.current-name:hover {
+    color: #00f5d4;
+}
+
+.all-names {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.all-names li {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin: 6px 0;
+}
+.winner-announcement {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e0f7fa; /* Soft premium light blue, or just #fff if you want */
+    opacity: 0;
+    animation: fadeInClean 1.2s forwards ease-out;
+}
+
+@keyframes fadeInClean {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
