@@ -4,6 +4,7 @@ import RotatingCustomer from './RotatingCustomer.jsx';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './index.css';
+import AddCustomer from "./AddCustomer.jsx";
 
 export default function App() {
     const [customers, setCustomers] = useState([]);
@@ -20,6 +21,7 @@ export default function App() {
     return (
         <>
             <Header />
+            <AddCustomer timerEnded={timerEnded} />
             {!timerEnded && (
                 <Time customers={customers} onWinner={setWinner} setTimerEnded={setTimerEnded} />
             )}

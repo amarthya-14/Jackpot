@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
 
 export default function Time({ customers, onWinner, setTimerEnded }) {
-    const initialTimeInSeconds = 15; // Change to 86400 for 24 hours
+    const initialTimeInSeconds = 45; // Change to 86400 for 24 hours
     const [timeLeft, setTimeLeft] = useState(initialTimeInSeconds);
 
     const fireConfetti = () => {
